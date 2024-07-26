@@ -12,7 +12,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #42f0f0;
         }
         #message {
             display: none;
@@ -23,12 +23,27 @@
     </style>
 </head>
 <body>
-    <button onclick="showMessage()">Cliccami!</button>
-    <div id="message">Ecco la frase che volevi vedere!</div>
+    <button onclick="showMessage()">Mostra barzelletta!</button>
+    <div id="message"></div>
     
     <script>
+        const phrases = [
+            "Ecco la frase che volevi vedere!",
+            "La vita è bella!",
+            "Ogni giorno è una nuova opportunità.",
+            "Segui i tuoi sogni.",
+            "Fai del tuo meglio!"
+        ];
+
         function showMessage() {
-            document.getElementById('message').style.display = 'block';
+            // Seleziona una frase casuale
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            const message = phrases[randomIndex];
+            
+            // Mostra la frase
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = message;
+            messageElement.style.display = 'block';
         }
     </script>
 </body>
