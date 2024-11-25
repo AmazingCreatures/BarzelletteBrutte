@@ -1,3 +1,4 @@
+/* Menù a tendina per navigare nelle sezioni del sito */
 <script>
     function toggleMenu() {
         var menu = document.getElementById("menu");
