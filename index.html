@@ -13,29 +13,58 @@
     gtag('config', 'G-8D6NJQJT3Z');
     </script>
 
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6988796355000399" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Generatore di barzellette brutte, battute divertenti in un click, freddure squallide e battute tristi.">
-    <title>Barzellette Brutte – Battute divertenti in un click</title>
+    
+    <!-- SEO Primario: Titolo, Descrizione e Canonical -->
+    <title>Barzellette Brutte – La Raccolta Ufficiale di Freddure e Battute Tristi</title>
+    <meta name="description" content="Oltre 1000 barzellette brutte, freddure squallide, giochi di parole e battute tristi. Clicca e genera subito la tua dose di battute non divertenti!">
+    <meta name="keywords" content="barzellette brutte, freddure, battute tristi, battute squallide, battute divertenti, dad joke italiani">
+    <link rel="canonical" href="https://barzellettebrutte.it/">
+    <meta name="robots" content="index, follow">
     
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     
-    <!-- OpenGraph per condivisione social -->
-    <meta property="og:title" content="Barzellette Brutte">
+    <!-- OpenGraph per Social (Facebook, WhatsApp, Telegram, LinkedIn) -->
+    <meta property="og:title" content="Barzellette Brutte – La Raccolta Ufficiale">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://barzellettebrutte.it">
-    <meta property="og:image" content="Logo.jpg">
-    <meta property="og:description" content="Barzellette Brutte, freddure e battute divertenti in un click!">
+    <meta property="og:url" content="https://barzellettebrutte.it/">
+    <meta property="og:image" content="https://barzellettebrutte.it/Logo.jpg">
+    <meta property="og:description" content="Oltre 1000 barzellette brutte, freddure squallide e battute tristi in un click.">
+    <meta property="og:site_name" content="Barzellette Brutte">
     
-    <!-- Schema.org JSON-LD -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Barzellette Brutte – Freddure e Battute">
+    <meta name="twitter:description" content="La raccolta ufficiale di barzellette brutte e freddure squallide in un click!">
+    <meta name="twitter:image" content="https://barzellettebrutte.it/Logo.jpg">
+    
+    <!-- Schema.org JSON-LD Dati Strutturati -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "url": "https://barzellettebrutte.it",
-      "logo": "https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/favicon.ico"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://barzellettebrutte.it/#website",
+          "url": "https://barzellettebrutte.it/",
+          "name": "Barzellette Brutte",
+          "description": "Il generatore ufficiale di barzellette brutte, freddure squallide e battute tristi.",
+          "inLanguage": "it-IT"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://barzellettebrutte.it/#organization",
+          "name": "Barzellette Brutte",
+          "url": "https://barzellettebrutte.it/",
+          "logo": "https://barzellettebrutte.it/Logo.jpg"
+        }
+      ]
     }
     </script>
 </head>
@@ -73,7 +102,7 @@
         <!-- Scheda Pulita della Battuta -->
         <div class="joke-card-clean">
             <div id="message" class="joke-display">
-                <span class="placeholder-text">Caricamento della battuta...</span>
+                Perché i pesci vivono nell'acqua salata? Perché il pepe li farebbe starnutire!
             </div>
         </div>
 
@@ -96,6 +125,28 @@
                     <span>📸 Salva Immagine</span>
                 </button>
             </div>
+
+            <!-- Badge 100% Human-Made (No-AI) -->
+            <div class="human-badge-pill" title="Nessuna Intelligenza Artificiale potrebbe concepire battute così brutte. Prodotto artigianale scritto, testato e fallito da esseri umani in carne ed ossa.">
+                <span class="pill-icon">🧠</span>
+                <span class="pill-text"><strong>Naturale Stupidità Umana</strong> – 100% Human Made</span>
+            </div>
+        </div>
+
+        <!-- Spazio Banner Pubblicitario (Piccolo e Non Invadente) -->
+        <div class="ad-banner-slot">
+            <span class="ad-label">Pubblicità</span>
+            <div class="ad-content-placeholder">
+                <!-- Annuncio Google AdSense Responsive -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6988796355000399"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
 
     </main>
@@ -104,8 +155,8 @@
     <div id="toast" class="toast">Testo copiato con successo! 📋</div>
 
     <footer>
-        <p>&copy; 2026 <a href="index.html">BarzelletteBrutte.it</a>. Tutti i diritti riservati (sfortunatamente).</p>
-        <p><a href="libri.html">I Nostri Libri</a></p>
+        <p>&copy; 2026 <a href="index.html">BarzelletteBrutte.it</a> • 100% Farina del nostro sacco (Zero AI) • Tutti i diritti riservati (sfortunatamente).</p>
+        <p><a href="libri.html">I Nostri Libri su Amazon</a></p>
     </footer>
 
     <script src="barzellette_data.js"></script>
