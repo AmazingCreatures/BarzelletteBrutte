@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    
     <!-- Banner per Consenso Cookies -->
     <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="cftNbXEeNOB7G-" async></script>
 
@@ -11,22 +10,26 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-8D6NJQJT3Z');
     </script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="barzellette brutte battute divertenti freddure squallide barzellette divertenti battute tristi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Generatore di barzellette brutte, battute divertenti in un click, freddure squallide e battute tristi.">
     <title>Barzellette Brutte – Battute divertenti in un click</title>
+    
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- OpenGraph per condivisione social -->
     <meta property="og:title" content="Barzellette Brutte">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://barzellettebrutte.it">
-    <meta property="og:image" content="https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/Logo.jpg">
-    <meta property="og:description" content="Barzellette Brutte, freddure e battute divertenti">
+    <meta property="og:image" content="Logo.jpg">
+    <meta property="og:description" content="Barzellette Brutte, freddure e battute divertenti in un click!">
+    
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -37,31 +40,75 @@
     </script>
 </head>
 
-
 <body>
-    <!-- Menù in alto a sx -->
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <!-- Intestazione con pulsanti visibili -->
+    <header>
+        <div class="logo-container">
+            <img src="Logo.jpg" alt="Logo Barzellette Brutte" class="logo-img">
+            <a href="index.html" class="site-title">Barzellette <span>Brutte</span></a>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="libri.html" class="nav-link">Libri</a>
+        </nav>
+    </header>
+
+    <!-- Matite Mascotte Laterali Scontornate nello Sfondo -->
+    <div class="mascot-side mascot-left">
+        <img src="matita_sinistra.png" alt="Mascotte Matita che indica la battuta" class="mascot-img">
     </div>
-    <div id="side-menu" class="side-menu">
-        <a href="https://barzellettebrutte.it">Home</a>
-        <a href="libri.html">Libri</a>
-        <a href="merchandise.html">Merchandise</a>
+    <div class="mascot-side mascot-right">
+        <img src="matita_destra.png" alt="Mascotte Matita che ride" class="mascot-img">
     </div>
 
-    <!-- Resto del contenuto -->
-    <div class="container">
+    <!-- Contenuto Principale: Semplificato, Accattivante e Focalizzato -->
+    <main class="main-wrapper">
+
         <div class="title-subtitle">
             <h1>Barzellette Brutte</h1>
-            <h2>Genera freddure brutte e battute divertenti.</h2>
+            <h2>Genera freddure pessime e battute (non) divertenti in un solo click!</h2>
         </div>
-        <div class="button-container">
-            <button onclick="showMessage()">Genera Barzelletta</button>
-            <div id="message"></div>
+
+        <!-- Scheda Pulita della Battuta -->
+        <div class="joke-card-clean">
+            <div id="message" class="joke-display">
+                <span class="placeholder-text">Caricamento della battuta...</span>
+            </div>
         </div>
-    </div>
+
+        <!-- Area Azioni Semplificata -->
+        <div class="actions-container">
+            <!-- Pulsante Principale Protagonista -->
+            <button class="btn btn-hero" onclick="showMessage()" title="Genera un'altra freddura">
+                <span>🎲 Nuova Battuta</span>
+            </button>
+
+            <!-- Pulsanti Secondari Compatti -->
+            <div class="subtle-actions">
+                <button class="btn btn-subtle" onclick="copyJoke()" title="Copia negli appunti">
+                    <span>📋 Copia</span>
+                </button>
+                <button class="btn btn-subtle" onclick="shareJoke()" title="Condividi su WhatsApp o Social">
+                    <span>💬 Condividi</span>
+                </button>
+                <button class="btn btn-subtle btn-coral" onclick="downloadJokeImage()" title="Salva come immagine grafica">
+                    <span>📸 Salva Immagine</span>
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Testo copiato con successo! 📋</div>
+
+    <footer>
+        <p>&copy; 2026 <a href="index.html">BarzelletteBrutte.it</a>. Tutti i diritti riservati (sfortunatamente).</p>
+        <p><a href="libri.html">I Nostri Libri</a></p>
+    </footer>
+
+    <script src="barzellette_data.js"></script>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

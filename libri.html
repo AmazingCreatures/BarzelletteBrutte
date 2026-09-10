@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    
     <!-- Banner per Consenso Cookies -->
     <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="cftNbXEeNOB7G-" async></script>
 
@@ -11,73 +10,107 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-8D6NJQJT3Z');
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="I nostri libri di barzellette brutte, freddure e battute. Acquistali su Amazon!">
+    <title>I Nostri Libri – Barzellette Brutte</title>
+    
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <div id="side-menu" class="side-menu">
-        <a href="https://barzellettebrutte.it">Home</a>
-        <a href="libri.html">Libri</a>
-        <a href="merchandise.html">Merchandise</a>
-    </div>
-    
-    <div class="container">
-        <h1>I nostri libri</h1>
-        <hr>
-        <div class="book-entry">
-            <a href="https://amzn.eu/d/2UsycAU" target="_blank">
-                <img src="https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/CopertinaRaccolta1.jpg" alt="365 + 1 BARZELLETTE BRUTTE: (Se ti fanno ridere hai l’ironia rotta)" class="book-image left">
-            </a>
-            <div class="book-info">
-                <a href="https://amzn.eu/d/2UsycAU" class="book-title" target="_blank">365 + 1 BARZELLETTE BRUTTE</a>
-                <!-- <p class="book-description">365 barzellette (più una per gli anni bisestili) che ti terranno compagnia (o forse no) da quando inizierai a leggere il libro fino a quando non l'avrai finito.</p> -->
-            </div>
+    <!-- Intestazione del sito con pulsanti visibili -->
+    <header>
+        <div class="logo-container">
+            <img src="Logo.jpg" alt="Logo Barzellette Brutte" class="logo-img">
+            <a href="index.html" class="site-title">Barzellette <span>Brutte</span></a>
         </div>
-        <hr>
-        <div class="book-entry">
+        
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="libri.html" class="nav-link active">Libri</a>
+        </nav>
+    </header>
+
+    <!-- Matite Mascotte Laterali Scontornate nello Sfondo -->
+    <div class="mascot-side mascot-left">
+        <img src="matita_sinistra.png" alt="Mascotte Matita" class="mascot-img">
+    </div>
+    <div class="mascot-side mascot-right">
+        <img src="matita_destra.png" alt="Mascotte Matita" class="mascot-img">
+    </div>
+
+    <!-- Contenuto Principale -->
+    <div class="main-wrapper">
+        
+        <div class="title-subtitle">
+            <h1>I Nostri Libri</h1>
+            <h2>La nostra collezione sacra di freddure per rovinare cene in famiglia.</h2>
+        </div>
+
+        <!-- Griglia dei Libri -->
+        <div class="books-grid">
             
-            <div class="book-info">
-                <a href="https://amzn.eu/d/7NUj5b3" class="book-title" target="_blank">Battute (non) Divertenti</a>
-                <!-- <p class="book-description">Una vasta selezione di barzellette brutte, così imbarazzanti che faranno rabbrividire i tuoi amici, ma sicuramente ti faranno sorridere e divertire.</p> -->
+            <!-- Libro 1 -->
+            <div class="book-card">
+                <div class="book-cover-container">
+                    <img src="CopertinaRaccolta1.jpg" alt="Copertina 365 + 1 Barzellette Brutte" class="book-cover-img">
+                </div>
+                <h3 class="book-card-title">365 + 1 Barzellette Brutte</h3>
+                <p class="book-card-desc">365 freddure terribili (più una per gli anni bisestili) studiate per distruggere ogni tipo di conversazione sociale. Se ti fa ridere hai l'ironia rotta.</p>
+                <div class="book-cta">
+                    <a href="https://amzn.eu/d/2UsycAU" target="_blank" rel="noopener" class="btn btn-primary">Acquista su Amazon</a>
+                </div>
             </div>
-            <a href="https://amzn.eu/d/7NUj5b3" target="_blank">
-                <img src="https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/CopertinaRaccolta2.jpg" alt="Battute (non) Divertenti: Più di 360 freddure e barzellette pessime" class="book-image right">
-            </a>
-        </div>
-        <hr>
-        <div class="book-entry">
-            <a href="https://amzn.eu/d/cFP9atR" target="_blank">
-                <img src="https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/CopertinaRaccolta3.jpg" alt="Un anno di risate (forzate): 365+1 freddure e barzellette brutte" class="book-image left">
-            </a>
-            <div class="book-info">
-                <a href="https://amzn.eu/d/cFP9atR" class="book-title" target="_blank">Un anno di risate (forzate)</a>
-                <!-- <p class="book-description">Un anno intero di risate, una freddura al giorno (e una in più per gli anni bisestili)!</p> -->
+
+            <!-- Libro 2 (Con la nuova copertina aggiunta da Daniele) -->
+            <div class="book-card">
+                <div class="book-cover-container">
+                    <img src="Copertina Battute non divertenti.jpg" alt="Copertina Battute (non) Divertenti" class="book-cover-img">
+                </div>
+                <h3 class="book-card-title">Battute (non) Divertenti</h3>
+                <p class="book-card-desc">Più di 360 freddure e barzellette così pessime che i tuoi amici ti toglieranno il saluto. Perfetto da regalare a chi ha la risata facile.</p>
+                <div class="book-cta">
+                    <a href="https://amzn.eu/d/7NUj5b3" target="_blank" rel="noopener" class="btn btn-primary">Acquista su Amazon</a>
+                </div>
             </div>
-        </div>
-        <hr>
-        <div class="book-entry">
-            
-            <div class="book-info">
-                <a href="https://amzn.eu/d/96PiGQn" class="book-title" target="_blank">Van Gelo: il sacro libro delle freddure</a>
-                <!-- <p class="book-description">Hai presente quelle battute che arrivano all’improvviso, ti colpiscono come una raffica di vento gelido… e poi ti fanno ridere? Van Gelo è tutto questo e molto di più: una raccolta di oltre 1000 freddure perfette per chi ama l’ironia pungente, i giochi di parole geniali e l’umorismo che sorprende.</p> -->
+
+            <!-- Libro 3 -->
+            <div class="book-card">
+                <div class="book-cover-container">
+                    <img src="CopertinaRaccolta3.jpg" alt="Copertina Un anno di risate forzate" class="book-cover-img">
+                </div>
+                <h3 class="book-card-title">Un Anno di Risate (forzate)</h3>
+                <p class="book-card-desc">Un anno intero di agonia umoristica! Una dose quotidiana di gelo relazionale da somministrare a parenti e colleghi.</p>
+                <div class="book-cta">
+                    <a href="https://amzn.eu/d/cFP9atR" target="_blank" rel="noopener" class="btn btn-primary">Acquista su Amazon</a>
+                </div>
             </div>
-            <a href="https://amzn.eu/d/96PiGQn" target="_blank">
-                <img src="https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/CopertinaVanGelo.jpg" alt="Van Gelo: il sacro libro delle freddure" class="book-image right">
-            </a>
+
+            <!-- Libro 4 -->
+            <div class="book-card">
+                <div class="book-cover-container">
+                    <img src="CopertinaVanGelo.jpg" alt="Copertina Van Gelo" class="book-cover-img">
+                </div>
+                <h3 class="book-card-title">Van Gelo: Il Sacro Libro</h3>
+                <p class="book-card-desc">Il testo sacro dell'umorismo freddo: oltre 1000 freddure leggendarie per veri adepti del disagio.</p>
+                <div class="book-cta">
+                    <a href="https://amzn.eu/d/96PiGQn" target="_blank" rel="noopener" class="btn btn-primary">Acquista su Amazon</a>
+                </div>
+            </div>
+
         </div>
-        <hr>
+
     </div>
+
+    <footer>
+        <p>&copy; 2026 <a href="index.html">BarzelletteBrutte.it</a>. Tutti i diritti riservati (sfortunatamente).</p>
+        <p><a href="index.html">Torna alla Home</a></p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
