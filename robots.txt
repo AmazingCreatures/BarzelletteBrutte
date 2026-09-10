@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://barzellettebrutte.it/sitemap.xml
