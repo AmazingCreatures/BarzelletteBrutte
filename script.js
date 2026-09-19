@@ -194,10 +194,10 @@ function shareJoke() {
     const shareText = `"${currentJoke}"\n\nLeggi altre barzellette pessime su: https://barzellettebrutte.it`;
     
     if (navigator.share) {
+        // Passiamo solo 'text' (che contiene già la battuta e il link)
+        // per evitare che browser e app come WhatsApp appendano una seconda volta l'URL o il titolo
         navigator.share({
-            title: 'Barzellette Brutte',
-            text: shareText,
-            url: 'https://barzellettebrutte.it'
+            text: shareText
         }).catch(err => console.log('Condivisione annullata', err));
     } else {
         // Fallback WhatsApp
