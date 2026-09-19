@@ -105,16 +105,17 @@ header {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .nav-link {
     font-family: var(--font-comic);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     color: var(--text-dark);
-    padding: 7px 16px;
+    padding: 6px 14px;
     border-radius: 6px;
     border: var(--border-thin);
     background-color: var(--text-light);
@@ -123,6 +124,7 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -143,23 +145,31 @@ header {
         padding: 10px 14px;
     }
     .logo-img {
-        width: 38px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
     }
     .site-title {
-        font-size: clamp(1.35rem, 5.5vw, 1.75rem);
+        font-size: clamp(1.3rem, 5.2vw, 1.7rem);
     }
     .nav-links {
         width: 100%;
         justify-content: center;
-        gap: 8px;
+        gap: 6px;
     }
     .nav-link {
-        font-size: 0.95rem;
-        padding: 8px 12px;
-        min-height: 42px;
-        flex: 1;
+        font-size: 0.88rem;
+        padding: 6px 10px;
+        min-height: 38px;
+        flex: 1 1 calc(25% - 6px);
+        min-width: 68px;
         text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-link {
+        flex: 1 1 calc(50% - 6px);
+        font-size: 0.85rem;
     }
 }
 
@@ -832,4 +842,323 @@ footer p {
 .merch-details p {
     color: #444;
     font-size: 1rem;
+}
+
+/* ==========================================================================
+   SEZIONI EDITORIALI HOME (ANTI-THIN CONTENT PER GOOGLE & ADSENSE)
+   ========================================================================== */
+.editorial-container {
+    width: 100%;
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+}
+
+.editorial-card {
+    background-color: var(--bg-page);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-flat);
+    border-radius: 14px;
+    padding: 28px 30px;
+    width: 100%;
+}
+
+.editorial-card h2, .editorial-card h3 {
+    font-family: var(--font-comic);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.editorial-card p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.editorial-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Griglia Categorie Battute */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 15px;
+}
+
+.category-box {
+    background: #FFF;
+    border: var(--border-thin);
+    border-radius: 10px;
+    box-shadow: var(--shadow-flat-sm);
+    padding: 16px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.category-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0px var(--text-dark);
+}
+
+.category-box-title {
+    font-family: var(--font-comic);
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.category-box-desc {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Lista Top 10 Freddure Storiche */
+.top-jokes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.static-joke-item {
+    background: #FFF;
+    border: var(--border-thin);
+    border-radius: 8px;
+    box-shadow: var(--shadow-flat-sm);
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.static-joke-text {
+    font-family: var(--font-comic);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.static-joke-note {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* FAQ Accordion / Cards */
+.faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.faq-item {
+    background: #FFF;
+    border: var(--border-thin);
+    border-radius: 8px;
+    box-shadow: var(--shadow-flat-sm);
+    padding: 16px 20px;
+}
+
+.faq-question {
+    font-family: var(--font-comic);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.faq-answer {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   PAGINE TESTUALI ISTITUZIONALI (CHI SIAMO, CONTATTI, PRIVACY)
+   ========================================================================== */
+.page-container {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.page-card {
+    background-color: var(--bg-page);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-flat);
+    border-radius: 14px;
+    padding: 35px 32px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.page-card h1 {
+    font-family: var(--font-comic);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 900;
+    color: var(--text-dark);
+    line-height: 1.15;
+    text-shadow: 2px 2px 0px var(--primary);
+}
+
+.page-card h2 {
+    font-family: var(--font-comic);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+
+.page-card p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.65;
+}
+
+.page-card ul {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
+    color: #444;
+}
+
+.contact-box {
+    background: #FFF;
+    border: var(--border-thin);
+    border-radius: 10px;
+    box-shadow: var(--shadow-flat-sm);
+    padding: 26px 28px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.contact-box h2 {
+    font-family: var(--font-comic);
+    font-size: 1.45rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-family: var(--font-comic);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.form-input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background-color: #FAFAFA;
+    border: var(--border-thin);
+    border-radius: 8px;
+    transition: border-color 0.15s, box-shadow 0.15s, background-color 0.15s;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    outline: none;
+    background-color: #FFF;
+    border-color: var(--text-dark);
+    box-shadow: 3px 3px 0px var(--text-dark);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.btn-submit {
+    align-self: flex-start;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.contact-success-card {
+    background-color: #E8FBF7;
+    border: 2px solid var(--accent-hover);
+    border-radius: 10px;
+    padding: 22px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-success-card h3 {
+    font-family: var(--font-comic);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.contact-success-card p {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .editorial-container {
+        margin-top: 35px;
+        gap: 22px;
+    }
+    .editorial-card, .page-card {
+        padding: 22px 18px;
+    }
+    .editorial-card h2, .editorial-card h3 {
+        font-size: 1.3rem;
+    }
+    .page-card h1 {
+        font-size: 1.85rem;
+    }
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
 }
