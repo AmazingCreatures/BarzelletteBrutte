@@ -564,6 +564,118 @@ header {
 }
 
 /* ==========================================================================
+   BANNER AVVISO CANALI UFFICIALI & SICUREZZA
+   ========================================================================== */
+.official-notice-banner {
+    background-color: #FFFDF5;
+    border: var(--border-thick);
+    box-shadow: var(--shadow-flat);
+    border-radius: 14px;
+    padding: 24px 28px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notice-badge {
+    background-color: var(--secondary);
+    color: #FFF;
+    font-family: var(--font-comic);
+    font-weight: 800;
+    font-size: 0.82rem;
+    padding: 5px 14px;
+    border: var(--border-thin);
+    border-radius: 20px;
+    box-shadow: 2px 2px 0px var(--text-dark);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+}
+
+.notice-title {
+    font-family: var(--font-comic);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.25;
+}
+
+.notice-text {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.55;
+}
+
+.official-links-box {
+    background: #FFF;
+    border: var(--border-thin);
+    border-radius: 10px;
+    box-shadow: var(--shadow-flat-sm);
+    padding: 14px 18px;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.official-link-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.official-link-row strong {
+    font-family: var(--font-comic);
+    color: var(--text-dark);
+}
+
+.official-link-row a {
+    color: var(--secondary-hover);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.notice-warning-text {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    color: #666;
+    font-style: italic;
+    border-left: 3px solid var(--secondary);
+    padding-left: 10px;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .official-notice-banner {
+        padding: 18px 16px;
+        margin-top: 8px;
+        margin-bottom: 22px;
+    }
+    .notice-title {
+        font-size: 1.18rem;
+    }
+    .notice-text {
+        font-size: 0.88rem;
+    }
+    .official-link-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+    }
+}
+
+/* ==========================================================================
    SPAZIO PUBBLICITARIO / BANNER ADSENSE (DISCRETO E NON INVADENTE)
    ========================================================================== */
 .ad-banner-slot {
