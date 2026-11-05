@@ -44,9 +44,10 @@ async function getJokes() {
 
 // Mostra una barzelletta casuale con animazione di transizione
 async function showMessage() {
-    const jokes = await getJokes();
     const messageElement = document.getElementById('message');
-    
+    if (!messageElement) return; // Se non siamo nella Home, non eseguire
+
+    const jokes = await getJokes();
     if (jokes.length === 0) {
         messageElement.textContent = 'Errore nel caricamento delle barzellette. Riprova più tardi!';
         messageElement.style.display = 'block';
@@ -345,7 +346,44 @@ function wrapTextOnCanvas(ctx, text, x, centerY, maxWidth, lineHeight) {
     }
 }
 
-// Carica una barzelletta all'avvio della pagina
+// Carica una barzelletta all'avvio della pagina (se presente il contenitore)
 window.addEventListener('DOMContentLoaded', () => {
     showMessage();
+});
+
+// ==========================================================================
+// TRACCIAMENTO AUTOMATICO GOOGLE ANALYTICS 4 (CLIC LINK AMAZON & LIBRI)
+// ==========================================================================
+document.addEventListener('click', function(e) {
+    // 1. Clic su qualsiasi link verso Amazon o amzn.eu
+    const amazonLink = e.target.closest('a[href*="amazon.it"], a[href*="amzn.eu"]');
+    if (amazonLink) {
+        // Cerca il titolo del libro dal data-attribute o dal titolo della scheda .book-card
+        const card = amazonLink.closest('.book-card');
+        const bookTitle = amazonLink.getAttribute('data-book') || 
+                          card?.querySelector('.book-card-title')?.textContent?.trim() || 
+                          'Libro Amazon';
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'click_amazon', {
+                'event_category': 'Libri Amazon',
+                'event_label': bookTitle,
+                'book_title': bookTitle,
+                'link_url': amazonLink.href
+            });
+        }
+        return;
+    }
+
+    // 2. Clic sul pulsante CTA "Scopri i Nostri 8 Libri su Amazon" (in Home page)
+    const ctaLibri = e.target.closest('a[href="libri.html"].btn-hero');
+    if (ctaLibri) {
+        if (typeof gtag === 'function') {
+            gtag('event', 'click_scopri_libri', {
+                'event_category': 'Navigazione',
+                'event_label': 'Pulsante Home Libri',
+                'link_url': ctaLibri.href
+            });
+        }
+    }
 });
